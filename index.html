@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>StarWars Dice</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+            <div><img src="top.png" alt="Edge of the Empire"></div>
+        <div id="dr">Dice Roller</div> 
+    <div class="row">
+        <button class="block" id="select">Select the Dice</button>
+        <button class="block" id="roll" onclick="rollMe();">Roll</button>
+        <button class="block" id="clear" onclick="clearMe();"> Clear </button>
+    </div>
+    <h2 class="dash">-</h2>          
+<div id="alldie">  
+    <div>
+        
+        <div id="green" class="dice">
+            <input type="image" src="green.png" id="aa" class="image" onclick="clickButton1();"/>
+            <div class="showCount" id="showCount1"></div>        
+        </div>
+        
+        <div id="yellow" class="dice">
+            <input type="image" src="yellow.png" id="bb" class="image" onclick="clickButton2();"/>
+            <div class="showCount" id="showCount2"></div>        
+        </div>
+        
+        <div id="purple" class="dice">
+            <input type="image" src="purple.png" id="cc" class="image" onclick="clickButton3();"/>
+            <div class="showCount" id="showCount3"></div>        
+        </div>
+        
+        <div id="red" class="dice">
+            <input type="image" src="red.png" id="dd" class="image" onclick="clickButton4();"/>
+            <div class="showCount" id="showCount4"></div>        
+        </div>
+        
+        <div id="blue" class="dice">
+            <input type="image" src="blue.png" id="ee" class="image" onclick="clickButton5();"/>
+            <div class="showCount" id="showCount5"></div>        
+        </div>
+        
+        <div id="black" class="dice">
+            <input type="image" src="black.png" id="ff" class="image" onclick="clickButton6();"/>
+            <div class="showCount" id="showCount6"></div>        
+        </div>
+        
+        <div id="white" class="dice">
+            <input type="image" src="white.png" id="gg" class="image" onclick="clickButton7();"/>
+            <div class="showCount" id="showCount7"></div>
+        </div>
+        
+    </div>
+</div>
+
+    <div id="results">
+        <p id="res">Results</p>
+        <div id="w" class="w">
+            <div id="greenResult" class="up"></div>
+            <div id="yellowResult" class="up"></div>
+            <div id="purpleResult" class="up"></div>
+            <div id="redResult" class="up"></div>
+            <div id="blueResult" class="up"></div>
+            <div id="blackResult" class="up"></div>
+            <div id="whiteResult" class="up"></div>
+        </div>
+    </div>
+     
+</body>
+</html>
+
+
