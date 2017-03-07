@@ -1,8 +1,11 @@
-div img{
-        max-width: 100%;
-        margin: 0px;
+.top{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
 }
-
 body{
     background-image: url("back.jpg");
     background-repeat: no-repeat;
@@ -12,86 +15,69 @@ body{
 #dr {
     text-align: center;
     color:#895A43;
-    font-size: 1.875em;
-    font-family: tahoma;
+    font-size: 4vw;
+    font-family: DIN, Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
-.row {
-  width: 100%;
-  margin: 0 auto;
+.container {
+    margin: 3% auto;
+    margin-top: 0;
+  display: flex;
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-between; /* switched from default (flex-start, see below) */
 }
-.block {
-  width: 100px;
-  float: left;
-}
-.dash{
-    color:red;
-    opacity: .0;
-}
+.select{
+    margin: 0;
+    color: #895A43;
+    float: left;
+    padding: 5px 10px 0px 10px;
+    font-weight: bold;
+    font-size: 5vw;
+    font-family: DIN, Helvetica, Arial, sans-serif;
+    border-radius: 20px 20px 0px 0px ;
+    background-color: rgba(255, 255, 255, 0.9);
+ }
 #roll{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    float: right;
-    width: auto;
-    padding: 10px;
-    text-align: center;
-    color:#895A43;
-    font-size: 1.875em;
-    font-family: tahoma;
-    font-weight: bold;
-    background-color: white;
-    border-radius: 15px;
-}
-#roll:hover{
-    background-color: lightgray;
-}
-#roll:active {
-  background-color: lightgray;
-  transform: translateY(4px);
+    float: left;
+    margin-left: 12.5%;
 }
 #clear{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    float: right;
-    margin-right: 10%;
-    width: auto;
-    padding: 10px;
-    text-align: center;
-    color:#895A43;
-    font-size: 1.875em;
-    font-family: tahoma;
-    font-weight: bold;
-    background-color: white;
-    border-radius: 15px;
+    float: left;
+    margin-right: 12.5%;
 }
-#clear:hover{
+
+.block{      
+    background-color: white;
+    color:#895a43;
+    padding: 1% 5%;
+    border-radius: 25px;
+    font-size: 8vw;
+    font-family: DIN, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    border: none;      
+    text-align: center;
+}
+.block:hover{
     background-color: lightgray;
 }
-#clear:active {
+.block:active {
   background-color: lightgray;
   transform: translateY(4px);
 }
-#select{
-    color: #895A43;
-    width: auto;
-    font-weight: bold;
-    font-size: 1.875em;
-    font-family: tahoma;
-    border-radius: 5px 25px;
-    background-color: white;
-    padding: 10px;
-    border: none
+
+.alldie{
+    width:99%;
+    float: left;
+    background: rgba(255, 255, 255, 0.4);    
+    border-radius: 0px 20px 20px 20px;    
 }
-#alldie{
-    width:auto;
-    margin:50px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.4);
-    position: relative;
-    border-radius: 20px;
-    margin:10px 1px;
+.title{
+    text-align: center;
+    color: darkred;
+    font-size: 2.5vw;
+    font-family: DIN, Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 .dice{
     float: left;
@@ -104,48 +90,46 @@ body{
 }
 .showCount{
     text-align: center;
-    font-family: arial;
+    font-family: DIN, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    border-radius: 10px;  
+    font-size: 6vw;
     color: white;
     background-color: #642C11;
-    margin: 0px 12px;
+    margin: 5px 25px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
- #res{
-    border-radius: 5px 25px;
-    background-color: white;
-    margin-top: 50px;
-    color: #642C11;
+ .res{
+    float: left;
+    width: auto;
+    margin: 0;
+    margin-top: 3%;
+    padding: 5px 10px 0px 10px;
+    border-radius: 25px 25px 0px 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 5vw;
+    color: #642c11;
+    font-family: DIN, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 1.875em;
-    font-family: tahoma;
-    text-align: center;
-    padding: 10px;
  }
-#w{
-    width:auto;
-    height:400px;
+ 
+.resultContainer{
+    width:99%;
+    float: left;
     background-color: rgba(255, 255, 255, 0.4);
     position: relative;
-    border-radius: 20px;
-    padding:1px;
-    margin:20px 1px;
+    border-radius: 0px 25px 25px 25px;
+    padding:1px;    
+    box-sizing: inherit;
 }
-.result{
-    text-align: center;
-    font-size: 50px;
-    color: white;
-    font-family: arial;
-}
+
 .row {
   width: 100%;
   margin: 0 auto;
 }
-.block {
-  width: 100px;
-  float: left;
-}
+
 .w{
  width: 100%;
   margin: 0 auto;
@@ -155,24 +139,12 @@ body{
   float: left;
   width:13.5%;
 }
-.gr{
-margin-top: 30px;
-margin-left: 50px;
-float:bottom;
-height: 100%;
-width: 100%;
-
-}
-.grr{
-   margin-top: 30px;
-float:bottom;
-margin-left: 50px;
-height: 100%;
-width: 100%;
-}
 
 .up img{
-    height: 100px;
-    width: 100px;
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
 }
 

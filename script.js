@@ -27,6 +27,11 @@ function clearMe() {
       #showCount7").html(0);
 
     $('.exp').remove();
+    
+    //allows clear button to be able to keep blank area in the results section
+    if(cnt1===0){
+            $("#greenResult").append("<img class='exp' src='blank.png'>");  
+          }
 
     cnt1 = cnt2 = cnt3 = cnt4 = cnt5 = cnt6 = cnt7 = 0;
 }
@@ -77,95 +82,97 @@ function clickButton7(){
 function rollMe(){
     
     $('.exp').remove();
+
+          if(cnt1===0){
+            $("#greenResult").append("<img class='exp' src='blank.png'>");  
+          }
+          if(cnt2===0){
+            $("#yellowResult").append("<img class='exp' src='blank.png'>");  
+          }
+          if(cnt3===0){
+            $("#purpleResult").append("<img class='exp' src='blank.png'>");  
+          }
+          if(cnt4===0){
+            $("#redResult").append("<img class='exp' src='blank.png'>");  
+          }
+          if(cnt5===0){
+            $("#blueResult").append("<img class='exp' src='blank.png'>");  
+          }
+          if(cnt6===0){
+            $("#blackResult").append("<img class='exp' src='blank.png'>");  
+          }
+          if(cnt7===0){
+            $("#whiteResult").append("<img class='exp' src='blank.png'>");  
+          }
+
     function aDie(){
-        // this.abilityDie = Math.floor(Math.random()*8+1);
         var image = Math.floor(Math.random()*8+1);
         switch(image){
-          case 1:
-          //ability
-          $("#greenResult").append("<img class='exp' src='df/bk1.png'>");
+          case 1:        
+          $("#greenResult").append("<img class='exp' src='df/g1.png'>");
           break;
-          case 2:
-          //pro
-          $("#greenResult").append("<img class='exp' src='df/bk1.png'>");
+          case 2:          
+          $("#greenResult").append("<img class='exp' src='df/g2.png'>");
           break;
-          case 3:
-          //ability
-          $("#greenResult").append("<img class='exp' src='df/bk1.png'>");
+          case 3:          
+          $("#greenResult").append("<img class='exp' src='df/g3.png'>");
           break;
-          case 4:
-          //pro
-          $("#greenResult").append("<img class='exp' src='df/bk1.png'>");
+          case 4:          
+          $("#greenResult").append("<img class='exp' src='df/g4.png'>");
           break;
-          case 5:
-          //ability
-          $("#greenResult").append("<img class='exp' src='df/bk1.png'>");
+          case 5:          
+          $("#greenResult").append("<img class='exp' src='df/g2.png'>");
           break;
-          case 6:
-          //pro
-          $("#greenResult").append("<img class='exp' src='df/bk1.png'>");
+          case 6:          
+          $("#greenResult").append("<img class='exp' src='df/g1.png'>");
           break;
-          case 7:
-          //abiity
-          $("#greenResult").append("<img class='exp' src='df/bk1.png'>");
+          case 7:          
+          $("#greenResult").append("<img class='exp' src='df/g5.png'>");
           break;
-          case 8:
-          //pro
-         $("#greenResult").append("<img class='exp' src='df/bk1.png'>");
+          case 8:          
+         $("#greenResult").append("<img class='exp' src='df/g6.png'>");
           break;
-        }
+        }        
     };
     function pDie(){
 
          var image = Math.floor(Math.random()*12+1);
          switch(image){
-           case 1:
-           //ability
-           $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 1:           
+           $("#yellowResult").append("<img class='exp' src='df/y1.png'>");
            break;
-           case 2:
-           //pro
-           $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 2:           
+           $("#yellowResult").append("<img class='exp' src='df/y2.png'>");
            break;
            case 3:
-//           ability
-           $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           $("#yellowResult").append("<img class='exp' src='df/y1.png'>");
            break;
-           case 4:
-           //pro
-           $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 4:           
+           $("#yellowResult").append("<img class='exp' src='df/y2.png'>");
            break;
-           case 5:
-           //ability
-           $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 5:           
+           $("#yellowResult").append("<img class='exp' src='df/y3.png'>");
            break;
            case 6:
-//           pro
-           $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           $("#yellowResult").append("<img class='exp' src='df/y4.png'>");
            break;
-           case 7:
-           //abiity
-           $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 7:           
+           $("#yellowResult").append("<img class='exp' src='df/y3.png'>");
            break;
-           case 8:
-           //pro
-          $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 8:           
+          $("#yellowResult").append("<img class='exp' src='df/y4.png'>");
            break;
-           case 9:
-           //pro
-          $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 9:           
+          $("#yellowResult").append("<img class='exp' src='df/y5.png'>");
            break;
-           case 10:
-           //pro
-          $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 10:           
+          $("#yellowResult").append("<img class='exp' src='df/y6.png'>");
            break;
-           case 11:
-           //pro
-          $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 11:           
+          $("#yellowResult").append("<img class='exp' src='df/y5.png'>");
            break;
-           case 12:
-           //pro
-          $("#yellowResult").append("<img class='exp' src='df/bk1.png'>");
+           case 12:           
+          $("#yellowResult").append("<img class='exp' src='df/y7.png'>");
            break;
          }
      };
@@ -173,36 +180,28 @@ function rollMe(){
 
          var image = Math.floor(Math.random()*8+1);
          switch(image){
-           case 1:
-           //ability
+           case 1:           
            $("#purpleResult").append("<img class='exp' src='df/p1.png'>");
            break;
-           case 2:
-           //pro
+           case 2:           
            $("#purpleResult").append("<img class='exp' src='df/p2.png'>");
            break;
-           case 3:
-           //ability
+           case 3:           
            $("#purpleResult").append("<img class='exp' src='df/p3.png'>");
            break;
-           case 4:
-           //pro
+           case 4:           
            $("#purpleResult").append("<img class='exp' src='df/p1.png'>");
            break;
-           case 5:
-           //ability
+           case 5:           
            $("#purpleResult").append("<img class='exp' src='df/p4.png'>");
            break;
-           case 6:
-           //pro
+           case 6:           
            $("#purpleResult").append("<img class='exp' src='df/p5.png'>");
            break;
-           case 7:
-           //abiity
+           case 7:           
            $("#purpleResult").append("<img class='exp' src='df/p6.png'>");
            break;
-           case 8:
-           //pro
+           case 8:           
           $("#purpleResult").append("<img class='exp' src='df/p1.png'>");
            break;
          }
@@ -211,52 +210,40 @@ function rollMe(){
 
          var image = Math.floor(Math.random()*12+1);
          switch(image){
-           case 1:
-           //ability
+           case 1:           
            $("#redResult").append("<img class='exp' src='df/r1.png'>");
            break;
-           case 2:
-           //pro
+           case 2:           
            $("#redResult").append("<img class='exp' src='df/r2.png'>");
            break;
-           case 3:
-           //ability
+           case 3:           
            $("#redResult").append("<img class='exp' src='df/r1.png'>");
            break;
-           case 4:
-           //pro
+           case 4:           
            $("#redResult").append("<img class='exp' src='df/r2.png'>");
            break;
-           case 5:
-           //ability
+           case 5:           
            $("#redResult").append("<img class='exp' src='df/r3.png'>");
            break;
-           case 6:
-           //pro
+           case 6:           
            $("#redResult").append("<img class='exp' src='df/r4.png'>");
            break;
-           case 7:
-           //abiity
+           case 7:           
            $("#redResult").append("<img class='exp' src='df/r3.png'>");
            break;
-           case 8:
-           //pro
+           case 8:           
           $("#redResult").append("<img class='exp' src='df/r4.png'>");
            break;
-           case 9:
-           //pro
+           case 9:           
           $("#redResult").append("<img class='exp' src='df/r5.png'>");
            break;
-           case 10:
-           //pro
+           case 10:           
           $("#redResult").append("<img class='exp' src='df/r6.png'>");
            break;
-           case 11:
-           //pro
+           case 11:           
           $("#redResult").append("<img class='exp' src='df/r5.png'>");
            break;
-           case 12:
-           //pro
+           case 12:           
           $("#redResult").append("<img class='exp' src='df/r7.png'>");
            break;
          }
@@ -265,28 +252,22 @@ function rollMe(){
 
          var image = Math.floor(Math.random()*6+1);
          switch(image){
-           case 1:
-           //ability
+           case 1:           
            $("#blueResult").append("<img class='exp' src='df/bl1.png'>");
            break;
-           case 2:
-           //pro
+           case 2:           
            $("#blueResult").append("<img class='exp' src='df/bl2.png'>");
            break;
-           case 3:
-           //ability
+           case 3:           
            $("#blueResult").append("<img class='exp' src='df/bl3.png'>");
            break;
-           case 4:
-           //pro
+           case 4:           
            $("#blueResult").append("<img class='exp' src='df/bl4.png'>");
            break;
-           case 5:
-           //ability
+           case 5:           
            $("#blueResult").append("<img class='exp' src='df/bl5.png'>");
            break;
-           case 6:
-           //pro
+           case 6:           
            $("#blueResult").append("<img class='exp' src='df/bl4.png'>");
            break;
          }
@@ -295,28 +276,22 @@ function rollMe(){
 
          var image = Math.floor(Math.random()*6+1);
          switch(image){
-           case 1:
-           //ability
+           case 1:           
            $("#blackResult").append("<img class='exp' src='df/bk1.png'>");
            break;
-           case 2:
-           //pro
+           case 2:           
            $("#blackResult").append("<img class='exp' src='df/bk2.png'>");
            break;
-           case 3:
-           //ability
+           case 3:           
            $("#blackResult").append("<img class='exp' src='df/bk3.png'>");
            break;
-           case 4:
-           //pro
+           case 4:           
            $("#blackResult").append("<img class='exp' src='df/bk1.png'>");
            break;
-           case 5:
-           //ability
+           case 5:           
            $("#blackResult").append("<img class='exp' src='df/bk2.png'>");
            break;
-           case 6:
-           //pro
+           case 6:           
            $("#blackResult").append("<img class='exp' src='df/bk3.png'>");
            break;
      };
@@ -325,56 +300,41 @@ function rollMe(){
 
          var image = Math.floor(Math.random()*12+1);
          switch(image){
-           case 1:
-           //ability
-           $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 1:           
+           $("#whiteResult").append("<img class='exp' src='df/w3.png'>");
            break;
-           case 2:
-           //pro
-           $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 2:           
+           $("#whiteResult").append("<img class='exp' src='df/w2.png'>");
            break;
-           case 3:
-           //ability
-           $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 3:           
+           $("#whiteResult").append("<img class='exp' src='df/w3.png'>");
            break;
-           case 4:
-           //pro
-           $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 4:           
+           $("#whiteResult").append("<img class='exp' src='df/w2.png'>");
            break;
-           case 5:
-           //ability
-           $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 5:           
+           $("#whiteResult").append("<img class='exp' src='df/w3.png'>");
            break;
-           case 6:
-           //pro
-           $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 6:           
+           $("#whiteResult").append("<img class='exp' src='df/w2.png'>");
            break;
-           case 7:
-           //abiity
-           $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 7:           
+           $("#whiteResult").append("<img class='exp' src='df/w3.png'>");
            break;
-           case 8:
-           //pro
-          $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 8:           
+          $("#whiteResult").append("<img class='exp' src='df/w1.png'>");
+           break;  
+           case 9:           
+          $("#whiteResult").append("<img class='exp' src='df/w3.png'>");
            break;
-           //pro
-          $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 10:           
+          $("#whiteResult").append("<img class='exp' src='df/w1.png'>");
            break;
-           case 9:
-           //pro
-          $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 11:           
+          $("#whiteResult").append("<img class='exp' src='df/w3.png'>");
            break;
-           case 10:
-           //pro
-          $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
-           break;
-           case 11:
-           //pro
-          $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
-           break;
-           case 12:
-           //pro
-          $("#whiteResult").append("<img class='exp' src='df/bk1.png'>");
+           case 12:           
+          $("#whiteResult").append("<img class='exp' src='df/w4.png'>");
            break;
          }
      };
