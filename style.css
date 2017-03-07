@@ -6,11 +6,21 @@
     height: auto;
     width: auto\9;
 }
+
+/*html { 
+  background: url(back.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
 body{
     background-image: url("back.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center top;    
+    background-size: 100% auto;
+    background-position:center top; 
+    background-attachment: fixed;
 }
 #dr {
     text-align: center;
@@ -35,7 +45,7 @@ body{
     font-weight: bold;
     font-size: 5vw;
     font-family: DIN, Helvetica, Arial, sans-serif;
-    border-radius: 20px 20px 0px 0px ;
+    border-radius: 10px 10px 0px 0px ;
     background-color: rgba(255, 255, 255, 0.9);
  }
 #roll{
@@ -70,7 +80,7 @@ body{
     width:99%;
     float: left;
     background: rgba(255, 255, 255, 0.4);    
-    border-radius: 0px 20px 20px 20px;    
+    border-radius: 0px 10px 10px 10px;    
 }
 .title{
     text-align: center;
@@ -96,9 +106,8 @@ body{
     font-size: 6vw;
     color: white;
     background-color: #642C11;
-    margin: 5px 25px;
-    padding-right: 5px;
-    padding-left: 5px;
+    margin: 0 auto;
+    width: 50%;
 }
 
  .res{
@@ -107,7 +116,7 @@ body{
     margin: 0;
     margin-top: 3%;
     padding: 5px 10px 0px 10px;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     background-color: rgba(255, 255, 255, 0.9);
     font-size: 5vw;
     color: #642c11;
@@ -119,10 +128,9 @@ body{
     width:99%;
     float: left;
     background-color: rgba(255, 255, 255, 0.4);
-    position: relative;
-    border-radius: 0px 25px 25px 25px;
-    padding:1px;    
-    box-sizing: inherit;
+    border-radius: 0px 10px 10px 10px;
+    min-height: 100px;
+    margin-bottom: 5%;
 }
 
 .row {
