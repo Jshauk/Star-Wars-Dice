@@ -1,12 +1,6 @@
 $(document).ready(function(){
-    $("#showCount1, \n\
-      #showCount2, \n\
-      #showCount3, \n\
-      #showCount4, \n\
-      #showCount5, \n\
-      #showCount6, \n\
-      #showCount7").html(0);
-});
+    $("#showCount1, #showCount2, #showCount3, #showCount4, #showCount5, #showCount6, #showCount7").html(0);
+
 
 var     aResult = $("#greenResult"),
         pResult = $("#yellowResult"),
@@ -15,94 +9,82 @@ var     aResult = $("#greenResult"),
         bResult = $("#blueResult"),
         sResult = $("#blackResult"),
         fResult = $("#whiteResult");
-var cnt1 = cnt2 = cnt3 = cnt4 = cnt5 = cnt6 = cnt7 = 0;
+var cnt1 = 0,
+    cnt2 = 0,
+    cnt3 = 0,
+    cnt4 = 0,
+    cnt5 = 0,
+    cnt6 = 0,
+    cnt7 = 0;
 
-function clearMe() {
-   $("#showCount1, \n\
-      #showCount2, \n\
-      #showCount3, \n\
-      #showCount4, \n\
-      #showCount5, \n\
-      #showCount6, \n\
-      #showCount7").html(0);
+ $('#clear').click(function (){
+   $("#showCount1, #showCount2, #showCount3, #showCount4, #showCount5, #showCount6, #showCount7").html(0);
 
     $('.exp').remove();
-    
-    //allows clear button to be able to keep blank area in the results section
-    if(cnt1===0){
-            $("#greenResult").append("<img class='exp' src='blank.png'>");  
-          }
 
     cnt1 = cnt2 = cnt3 = cnt4 = cnt5 = cnt6 = cnt7 = 0;
-}
+});
 
+    $('.ctrl').click(function (){
+       var id = $(this).attr('id');
+       
+       switch(id){
+           case "aa":
+               ++cnt1;
+               console.log(cnt1);
+               break;
+           case "bb":
+               ++cnt2;
+               break;
+           case "cc":
+               ++cnt3;
+               break;
+           case "dd":
+               ++cnt4;
+               break;
+           case "ee":
+               ++cnt5;
+               break;
+           case "ff":
+               ++cnt6;
+               break;
+           case "gg":
+               ++cnt7;
+               break;
+       }
+        $('#showCount1').html(cnt1);
+        $('#showCount2').html(cnt2);
+        $('#showCount3').html(cnt3);
+        $('#showCount4').html(cnt4);
+        $('#showCount5').html(cnt5);
+        $('#showCount6').html(cnt6);
+        $('#showCount7').html(cnt7);
+    });
 
-function clickButton1(){
-  cnt1=parseInt(cnt1)+parseInt(1);
-  var divData=document.getElementById("showCount1");
-  divData.innerHTML=cnt1;//this part has been edited
-}
-
-function clickButton2(){
-  cnt2=parseInt(cnt2)+parseInt(1);
-  var divData=document.getElementById("showCount2");
-  divData.innerHTML=cnt2;//this part has been edited
-}
-
-function clickButton3(){
-  cnt3=parseInt(cnt3)+parseInt(1);
-  var divData=document.getElementById("showCount3");
-  divData.innerHTML=cnt3;//this part has been edited
-}
-
-function clickButton4(){
-  cnt4=parseInt(cnt4)+parseInt(1);
-  var divData=document.getElementById("showCount4");
-  divData.innerHTML=cnt4;//this part has been edited
-}
-
-function clickButton5(){
-  cnt5=parseInt(cnt5)+parseInt(1);
-  var divData=document.getElementById("showCount5");
-  divData.innerHTML=cnt5;//this part has been edited
-}
-
-function clickButton6(){
-  cnt6=parseInt(cnt6)+parseInt(1);
-  var divData=document.getElementById("showCount6");
-  divData.innerHTML=cnt6;//this part has been edited
-}
-
-function clickButton7(){
-  cnt7=parseInt(cnt7)+parseInt(1);
-  var divData=document.getElementById("showCount7");
-  divData.innerHTML=cnt7;//this part has been edited
-}
-
-function rollMe(){
+ $('#roll').click(function (){
     
     $('.exp').remove();
 
           if(cnt1===0){
-            $("#greenResult").append("<img class='exp' src='blank.png'>");  
+            $("#greenResult").append("<img class='exp' src='img/blank.png'>");  
           }
           if(cnt2===0){
-            $("#yellowResult").append("<img class='exp' src='blank.png'>");  
+            $("#yellowResult").append("<img class='exp' src='img/blank.png'>");  
           }
           if(cnt3===0){
-            $("#purpleResult").append("<img class='exp' src='blank.png'>");  
+            $("#purpleResult").append("<img class='exp' 'src='img/blank.png'>");  
           }
           if(cnt4===0){
-            $("#redResult").append("<img class='exp' src='blank.png'>");  
+            $("#redResult").append("<img class='exp' src='img/blank.png'>");  
           }
           if(cnt5===0){
-            $("#blueResult").append("<img class='exp' src='blank.png'>");  
+            $("#blueResult").append("<img class='exp' src='img/blank.png'>");  
           }
           if(cnt6===0){
-            $("#blackResult").append("<img class='exp' src='blank.png'>");  
+            $("#blackResult").append("<img class='exp' src='img/blank.png'>");  
           }
           if(cnt7===0){
-            $("#whiteResult").append("<img class='exp' src='blank.png'>");  
+            $("#whiteResult").append("<img class='exp' src='img/blank.png'>");  
           }
 
     function aDie(){
@@ -133,7 +115,7 @@ function rollMe(){
          $("#greenResult").append("<img class='exp' src='df/g6.png'>");
           break;
         }        
-    };
+    }
     function pDie(){
 
          var image = Math.floor(Math.random()*12+1);
@@ -175,7 +157,7 @@ function rollMe(){
           $("#yellowResult").append("<img class='exp' src='df/y7.png'>");
            break;
          }
-     };
+     }
     function dDie(){
 
          var image = Math.floor(Math.random()*8+1);
@@ -205,7 +187,7 @@ function rollMe(){
           $("#purpleResult").append("<img class='exp' src='df/p1.png'>");
            break;
          }
-     };
+     }
     function cDie(){
 
          var image = Math.floor(Math.random()*12+1);
@@ -247,7 +229,7 @@ function rollMe(){
           $("#redResult").append("<img class='exp' src='df/r7.png'>");
            break;
          }
-     };
+     }
     function bDie(){
 
          var image = Math.floor(Math.random()*6+1);
@@ -271,7 +253,7 @@ function rollMe(){
            $("#blueResult").append("<img class='exp' src='df/bl4.png'>");
            break;
          }
-     };
+     }
     function sDie(){
 
          var image = Math.floor(Math.random()*6+1);
@@ -294,7 +276,7 @@ function rollMe(){
            case 6:           
            $("#blackResult").append("<img class='exp' src='df/bk3.png'>");
            break;
-     };
+     }
  }
     function fDie(){
 
@@ -337,66 +319,64 @@ function rollMe(){
           $("#whiteResult").append("<img class='exp' src='df/w4.png'>");
            break;
          }
-     };
- 
+     }
 
     function abilityRolls(n) {
       var aRolls = new Array(n);
       for (var i = 0; i < n; ++i) {
           aRolls[i] = new aDie();
-    };
+    }
       return aRolls;
-    };
+    }
 
     function proRolls(n) {
       var pRolls = new Array(n);
       for (var i = 0; i < n; ++i) {
           pRolls[i] = new pDie();
-    };
+    }
       return pRolls;
-    };
+    }
     
     function diffRolls(n) {
       var dRolls = new Array(n);
       for (var i = 0; i < n; ++i) {
           dRolls[i] = new dDie();
-    };
+    }
       return dRolls;
-    };
+    }
     
     function challRolls(n) {
       var cRolls = new Array(n);
       for (var i = 0; i < n; ++i) {
           cRolls[i] = new cDie();
-    };
+    }
       return cRolls;
-    };
+    }
     
     function boostRolls(n) {
       var bRolls = new Array(n);
       for (var i = 0; i < n; ++i) {
           bRolls[i] = new bDie();
-    };
+    }
       return bRolls;
-    };
+    }
     
     function setRolls(n) {
       var sRolls = new Array(n);
       for (var i = 0; i < n; ++i) {
           sRolls[i] = new sDie();
-    };
+    }
       return sRolls;
-    };
+    }
     
     function forceRolls(n) {
       var fRolls = new Array(n);
       for (var i = 0; i < n; ++i) {
           fRolls[i] = new fDie();
-    };
+    }
       return fRolls;
-    };
+    }
     
-
     abilityRolls(cnt1),
     proRolls(cnt2),
     diffRolls(cnt3),
@@ -404,14 +384,6 @@ function rollMe(){
     boostRolls(cnt5),
     setRolls(cnt6),
     forceRolls(cnt7);
-    
-    //console.log(cnt1, cnt2, cnt3, cnt4, cnt5, cnt6, cnt7);
-//console.log(aResults,pResults);
-    // //aResults.forEach(function(index){
-    //   var resultNumbers = this.vlaue;
-    //   console.log(aResults[resultNumbers]);
-     }
-
-    //  // })
-   // }
-
+     
+     });
+});

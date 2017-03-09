@@ -16,7 +16,7 @@
 }*/
 
 body{
-    background-image: url("back.jpg");
+    background-image: url("../img/back.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position:center top; 
@@ -29,15 +29,16 @@ body{
     font-family: DIN, Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
-.container {
+
+#buttonTop{
+    width:99%;
+    float: left;
+    background: rgba(255, 255, 255, 0.4);    
+    border-radius: 0px 10px 10px 10px;   
     margin: 3% auto;
     margin-top: 0;
-  display: flex;
-  flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: nowrap;              /* default value; can be omitted */
-  justify-content: space-between; /* switched from default (flex-start, see below) */
 }
-.select{
+#select{
     margin: 0;
     color: #895A43;
     float: left;
@@ -50,14 +51,14 @@ body{
  }
 #roll{
     float: left;
+    margin-right: 12.5%;
     margin-left: 12.5%;
 }
 #clear{
     float: left;
-    margin-right: 12.5%;
 }
 
-.block{      
+#buttonTop button{      
     background-color: white;
     color:#895a43;
     padding: 1% 5%;
@@ -73,14 +74,16 @@ body{
 }
 .block:active {
   background-color: lightgray;
-  transform: translateY(4px);
+/*  transform: translateY(4px);*/
 }
 
-.alldie{
+#container{
     width:99%;
     float: left;
     background: rgba(255, 255, 255, 0.4);    
-    border-radius: 0px 10px 10px 10px;    
+    border-radius: 0px 10px 10px 10px;   
+    margin: 3% auto;
+    margin-top: 0;
 }
 .title{
     text-align: center;
@@ -88,6 +91,13 @@ body{
     font-size: 2.5vw;
     font-family: DIN, Helvetica, Arial, sans-serif;
     font-weight: bold;
+}
+.dice button{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
 }
 .dice{
     float: left;
@@ -129,7 +139,7 @@ body{
     float: left;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 0px 10px 10px 10px;
-    min-height: 100px;
+    min-height: 200px;
     margin-bottom: 5%;
 }
 
@@ -155,4 +165,10 @@ body{
     height: auto;
     width: auto\9;
 }
-
+#aa{
+   
+}
+button{
+    border: none;
+    outline: none;
+}

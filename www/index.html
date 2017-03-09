@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Star Wars Dice</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <img src="img/top.png" alt="Edge of the Empire" class="top">
+    <div id="buttonTop">        
+        <button id="roll">Roll</button>
+        <button  id="clear"> Clear </button>
+    </div>
+    <p id="select">Select the Dice</p>
+<div id="container">  
+    <div>        
+        <div id="green" class="dice">
+            <p class="title">Ability</p>
+            <button class='ctrl' id='aa'><img class='image' src="img/green.png"></button>
+            <div class="showCount" id="showCount1"></div>        
+        </div>
+        
+        <div id="yellow" class="dice">
+            <p class="title">Proficency</p>
+            <button class='ctrl' id='bb'><img class='image' src="img/yellow.png"></button>
+            <div class="showCount" id="showCount2"></div>        
+        </div>
+        
+        <div id="purple" class="dice">
+            <p class="title">Difficulty</p>
+            <button class='ctrl' id='cc'><img class='image' src="img/purple.png"></button>
+            <div class="showCount" id="showCount3"></div>        
+        </div>
+        
+        <div id="red" class="dice">
+            <p class="title">Challenge</p>
+            <button class='ctrl' id='dd'><img class='image' src="img/red.png"></button>
+            <div class="showCount" id="showCount4"></div>        
+        </div>
+        
+        <div id="blue" class="dice">
+            <p class="title">Boost</p>
+            <button class='ctrl' id='ee'><img class='image' src="img/blue.png"></button>
+            <div class="showCount" id="showCount5"></div>        
+        </div>
+        
+        <div id="black" class="dice">
+            <p class="title">Setback</p>
+            <button class='ctrl' id='ff'><img class='image' src="img/black.png"></button>
+            <div class="showCount" id="showCount6"></div>        
+        </div>
+        
+        <div id="white" class="dice">
+            <p class="title">Force</p>
+            <button class='ctrl' id='gg'><img class='image' src="img/white.png"></button>
+            <div class="showCount" id="showCount7"></div>
+        </div>
+        
+    </div>
+</div>
+
+    <div id="results" class="resultBox">
+        <p id="res" class="res">Results</p>
+        <div id="w" class="resultContainer">
+            <div id="greenResult" class="up"></div>
+            <div id="yellowResult" class="up"></div>
+            <div id="purpleResult" class="up"></div>
+            <div id="redResult" class="up"></div>
+            <div id="blueResult" class="up"></div>
+            <div id="blackResult" class="up"></div>
+            <div id="whiteResult" class="up"></div>
+        </div>
+    </div>
+     
+</body>
+</html>
